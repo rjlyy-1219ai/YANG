@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+    <!-- 2. 定义容器，设置ID属性，设置容器的宽度和高度 -->
+    <div id="chart1" style="width: 800px; height: 700px;"></div>
+    <!-- 1. 引入 echarts.js -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.1/echarts.min.js"></script>
+    <script type="text/javascript">
+        // 3. 初始化图表
+        let echart1Obj = document.getElementById('chart1')
+        let chart1 = echarts.init(echart1Obj)
+        // 4. 配置图表
+        let option1 = {
+            series: [
+                {
+                    type: 'tree',
+                    data: [
+                        {
+                            name: "董事长",
+                            label: {
+                                show: true,
+                                // position: "top",
+                                // position: "bottom",
+                                // position: "left",
+                                // position: "right",
+                                position: "inside",
+                                // distance: 50,
+                                borderWidth: 1,
+                                borderColor: '#0062B1',
+                                borderStyle: 'solid',
+                                backgroundColor: "#0062B1",
+                                color: "#ffff",
+                                width: 60,
+                                borderRadius: 30,
+                                fontFamily: "苹方",
+                                fontSize: 18,
+                                fontWeight: 800,
+                                padding: [5, 10, 5, 10],
+                                offset: [0, 10]
+                            },
+                            lineStyle: {
+                                color: "#009CE0",
+                                // curveness: 0.5,
+                                width: 3
+                            },
+                            children: [
+                                {
+                                    name: "总经理",
+                                    label: {
+                                        show: true,
+                                        // position: "top",
+                                        // position: "bottom",
+                                        // position: "left",
+                                        // position: "right",
+                                        position: "inside",
+                                        // distance: 50,
+                                        borderWidth: 1,
+                                        borderColor: '#009CE0',
+                                        borderStyle: 'solid',
+                                        backgroundColor: "#009CE0",
+                                        color: "#ffff",
+                                        width: 45,
+
+                                        borderRadius: 30,
+                                        fontFamily: "苹方",
+                                        fontSize: 16,
+                                        fontWeight: 600,
+                                        padding: [5, 10, 5, 10],
+                                        offset: [0, 10]
+                                    },
+                                    lineStyle: {
+                                        color: "#66BB00",
+                                        // curveness: 0.5,
+                                        width: 3
+                                    },
+                                    children: [
+                                        {
+                                            name: "行政总监",
+                                            label: {
+                                                show: true,
+                                                // position: "top",
+                                                // position: "bottom",
+                                                // position: "left",
+                                                // position: "right",
+                                                position: "inside",
+                                                // distance: 50,
+                                                borderWidth: 1,
+                                                borderColor: '#FB9E00',
+                                                borderStyle: 'solid',
+                                                backgroundColor: "#FB9E00",
+                                                color: "#ffff",
+                                                width: 45,
+                                                borderRadius: 5,
+                                                fontFamily: "苹方",
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                padding: [5, 10, 5, 10],
+                                                offset: [0, 10]
+                                            },
+                                            lineStyle: {
+                                                color: "#FB9E00",
+                                                // curveness: 0.5,
+                                                width: 3
+                                            },
+                                            children: [
+                                                {
+                                                    name: "综合管理部",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 100,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#FB9E00',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 25]
+                                                    }
+                                                },
+                                                {
+                                                    name: "企划部",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 100,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#FB9E00',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 25]
+                                                    }
+                                                },
+                                                {
+                                                    name: "品质部",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 100,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#FB9E00',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 25]
+                                                    }
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            name: "财务总监",
+                                            label: {
+                                                show: true,
+                                                // position: "top",
+                                                // position: "bottom",
+                                                // position: "left",
+                                                // position: "right",
+                                                position: "inside",
+                                                // distance: 50,
+                                                borderWidth: 1,
+                                                borderColor: '#7B64FF',
+                                                borderStyle: 'solid',
+                                                backgroundColor: "#7B64FF",
+                                                color: "#ffff",
+                                                width: 45,
+                                                borderRadius: 5,
+                                                fontFamily: "苹方",
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                padding: [5, 10, 5, 10],
+                                                offset: [0, 10]
+                                            },
+                                            lineStyle: {
+                                                color: "#7B64FF",
+                                                // curveness: 0.5,
+                                                width: 3
+                                            },
+                                            children: [
+                                                {
+                                                    name: "出纳",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 70,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#7B64FF',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 10]
+                                                    }
+                                                },
+                                                {
+                                                    name: "财务",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 70,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#7B64FF',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 10]
+                                                    }
+                                                }
+                                            ]
+                                        },
+
+                                        {
+                                            name: "运营总监",
+                                            label: {
+                                                show: true,
+                                                // position: "top",
+                                                // position: "bottom",
+                                                // position: "left",
+                                                // position: "right",
+                                                position: "inside",
+                                                // distance: 50,
+                                                borderWidth: 1,
+                                                borderColor: '#B0BC00',
+                                                borderStyle: 'solid',
+                                                backgroundColor: "#B0BC00",
+                                                color: "#ffff",
+                                                width: 45,
+                                                borderRadius: 5,
+                                                fontFamily: "苹方",
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                padding: [5, 10, 5, 10],
+                                                offset: [0, 10]
+                                            },
+                                            lineStyle: {
+                                                color: "#B0BC00",
+                                                // curveness: 0.5,
+                                                width: 3
+                                            },
+                                            children: [
+                                                {
+                                                    name: "物业管理部",
+                                                    label: {
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 1,
+                                                        borderColor: '#B0BC00',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#B0BC00",
+                                                        color: "#ffff",
+                                                        width: 50,
+                                                        borderRadius: 5,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 12,
+                                                        fontWeight: 600,
+                                                        padding: [5, 10, 5, 10],
+                                                        offset: [0, 10]
+                                                    },
+                                                    lineStyle: {
+                                                        color: "#B0BC00",
+                                                        // curveness: 0.5,
+                                                        width: 3
+                                                    },
+                                                    children: [
+                                                        {
+                                                            name: "保洁",
+                                                            label: {
+                                                                overflow: 'break',
+                                                                width: 10,
+                                                                height: 100,
+                                                                show: true,
+                                                                // position: "top",
+                                                                // position: "bottom",
+                                                                // position: "left",
+                                                                // position: "right",
+                                                                position: "inside",
+                                                                // distance: 50,
+                                                                borderWidth: 2,
+                                                                borderColor: '#B0BC00',
+                                                                borderStyle: 'solid',
+                                                                backgroundColor: "#ffff",
+                                                                color: "#000000",
+                                                                // width: 45,
+
+                                                                borderRadius: 30,
+                                                                fontFamily: "苹方",
+                                                                fontSize: 14,
+                                                                fontWeight: 600,
+                                                                // padding: [5, 10, 5, 10],
+                                                                offset: [0, 25]
+                                                            }
+                                                        },
+                                                        {
+                                                            name: "公共秩序维护",
+                                                            label: {
+                                                                overflow: 'break',
+                                                                width: 10,
+                                                                height: 100,
+                                                                show: true,
+                                                                // position: "top",
+                                                                // position: "bottom",
+                                                                // position: "left",
+                                                                // position: "right",
+                                                                position: "inside",
+                                                                // distance: 50,
+                                                                borderWidth: 2,
+                                                                borderColor: '#B0BC00',
+                                                                borderStyle: 'solid',
+                                                                backgroundColor: "#ffff",
+                                                                color: "#000000",
+                                                                // width: 45,
+
+                                                                borderRadius: 30,
+                                                                fontFamily: "苹方",
+                                                                fontSize: 14,
+                                                                fontWeight: 600,
+                                                                // padding: [5, 10, 5, 10],
+                                                                offset: [0, 25]
+                                                            }
+                                                        },
+                                                        {
+                                                            name: "设备",
+                                                            label: {
+                                                                overflow: 'break',
+                                                                width: 10,
+                                                                height: 100,
+                                                                show: true,
+                                                                // position: "top",
+                                                                // position: "bottom",
+                                                                // position: "left",
+                                                                // position: "right",
+                                                                position: "inside",
+                                                                // distance: 50,
+                                                                borderWidth: 2,
+                                                                borderColor: '#B0BC00',
+                                                                borderStyle: 'solid',
+                                                                backgroundColor: "#ffff",
+                                                                color: "#000000",
+                                                                // width: 45,
+
+                                                                borderRadius: 30,
+                                                                fontFamily: "苹方",
+                                                                fontSize: 14,
+                                                                fontWeight: 600,
+                                                                // padding: [5, 10, 5, 10],
+                                                                offset: [0, 25]
+                                                            }
+                                                        },
+                                                        {
+                                                            name: "园林绿化",
+                                                            label: {
+                                                                overflow: 'break',
+                                                                width: 10,
+                                                                height: 100,
+                                                                show: true,
+                                                                // position: "top",
+                                                                // position: "bottom",
+                                                                // position: "left",
+                                                                // position: "right",
+                                                                position: "inside",
+                                                                // distance: 50,
+                                                                borderWidth: 2,
+                                                                borderColor: '#B0BC00',
+                                                                borderStyle: 'solid',
+                                                                backgroundColor: "#ffff",
+                                                                color: "#000000",
+                                                                // width: 45,
+
+                                                                borderRadius: 30,
+                                                                fontFamily: "苹方",
+                                                                fontSize: 14,
+                                                                fontWeight: 600,
+                                                                // padding: [5, 10, 5, 10],
+                                                                offset: [0, 25]
+                                                            }
+                                                        },
+                                                        {
+                                                            name: "食堂管理",
+                                                            label: {
+                                                                overflow: 'break',
+                                                                width: 10,
+                                                                height: 100,
+                                                                show: true,
+                                                                // position: "top",
+                                                                // position: "bottom",
+                                                                // position: "left",
+                                                                // position: "right",
+                                                                position: "inside",
+                                                                // distance: 50,
+                                                                borderWidth: 2,
+                                                                borderColor: '#B0BC00',
+                                                                borderStyle: 'solid',
+                                                                backgroundColor: "#ffff",
+                                                                color: "#000000",
+                                                                // width: 45,
+
+                                                                borderRadius: 30,
+                                                                fontFamily: "苹方",
+                                                                fontSize: 14,
+                                                                fontWeight: 600,
+                                                                // padding: [5, 10, 5, 10],
+                                                                offset: [0, 25]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "市场总监",
+                                            label: {
+                                                show: true,
+                                                // position: "top",
+                                                // position: "bottom",
+                                                // position: "left",
+                                                // position: "right",
+                                                position: "inside",
+                                                // distance: 50,
+                                                borderWidth: 1,
+                                                borderColor: '#16A5A5',
+                                                borderStyle: 'solid',
+                                                backgroundColor: "#16A5A5",
+                                                color: "#ffff",
+                                                width: 45,
+                                                borderRadius: 5,
+                                                fontFamily: "苹方",
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                padding: [5, 10, 5, 10],
+                                                offset: [0, 10]
+                                            },
+                                            lineStyle: {
+                                                color: "#16A5A5",
+                                                // curveness: 0.5,
+                                                width: 3
+                                            },
+                                            children: [
+                                                {
+                                                    name: "市场研发",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 70,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#16A5A5',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 10]
+                                                    }
+                                                },
+                                                {
+                                                    name: "市场策划",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 70,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#16A5A5',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 10]
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "工程总监",
+                                            label: {
+                                                show: true,
+                                                // position: "top",
+                                                // position: "bottom",
+                                                // position: "left",
+                                                // position: "right",
+                                                position: "inside",
+                                                // distance: 50,
+                                                borderWidth: 1,
+                                                borderColor: '#68BC00',
+                                                borderStyle: 'solid',
+                                                backgroundColor: "#68BC00",
+                                                color: "#ffff",
+                                                width: 45,
+                                                borderRadius: 5,
+                                                fontFamily: "苹方",
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                padding: [5, 10, 5, 10],
+                                                offset: [0, 10]
+                                            },
+                                            lineStyle: {
+                                                color: "#68BC00",
+                                                // curveness: 0.5,
+                                                width: 3
+                                            },
+                                            children: [
+                                                {
+                                                    name: "高空清洁▲维修",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 140,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#68BC00',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 40]
+                                                    }
+                                                },
+                                                {
+                                                    name: "开荒▲打蜡▲结晶",
+                                                    label: {
+                                                        overflow: 'break',
+                                                        width: 10,
+                                                        height: 140,
+                                                        show: true,
+                                                        // position: "top",
+                                                        // position: "bottom",
+                                                        // position: "left",
+                                                        // position: "right",
+                                                        position: "inside",
+                                                        // distance: 50,
+                                                        borderWidth: 2,
+                                                        borderColor: '#68BC00',
+                                                        borderStyle: 'solid',
+                                                        backgroundColor: "#ffff",
+                                                        color: "#000000",
+                                                        // width: 45,
+
+                                                        borderRadius: 30,
+                                                        fontFamily: "苹方",
+                                                        fontSize: 14,
+                                                        fontWeight: 600,
+                                                        // padding: [5, 10, 5, 10],
+                                                        offset: [0, 40]
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    // edgeShape: "curve",
+                    edgeShape: "polyline",
+                    // orient: "RL",
+                    // orient: "LR",
+                    symbol: "none",
+                    symbolSize: 10,
+                    orient: "TB",
+                    initialTreeDepth: -1,
+                    symbolOffset: [0, 0],
+                    // orient: "BT",
+                    label: {
+                        show: true,
+                        // position: "top",
+                        // position: "bottom",
+                        // position: "left",
+                        // position: "right",
+                        position: "inside",
+                        distance: 20,
+                        borderWidth: 1,
+                        borderColor: 'red',
+                        borderStyle: 'solid',
+                        padding: [5, 10, 5, 10],
+                        offset: [0, 10]
+
+                    },
+                    lineStyle: {
+                        color: "blue",
+                        // curveness: 0.5
+                    }
+                }
+            ]
+        };
+        // 5. 渲染图表
+        chart1.setOption(option1)
+    </script>
+</body>
+
+</html>
